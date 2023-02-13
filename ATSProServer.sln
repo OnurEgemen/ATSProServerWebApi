@@ -11,17 +11,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{33293784-C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External", "External", "{0EEA692F-B31E-4D36-B0A9-8D5033D6E1EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATSProServer.Application", "ATSProServer.Application\ATSProServer.Application.csproj", "{730A3174-8827-4A42-9222-626B6F42C788}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATSProServer.Application", "ATSProServer.Application\ATSProServer.Application.csproj", "{730A3174-8827-4A42-9222-626B6F42C788}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATSProServer.Domain", "ATSProServer.Domain\ATSProServer.Domain.csproj", "{4801A1D7-9E18-45D0-9E29-3BF9D12B0C9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATSProServer.Domain", "ATSProServer.Domain\ATSProServer.Domain.csproj", "{4801A1D7-9E18-45D0-9E29-3BF9D12B0C9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATSProServer.Infrastructure", "ATSProServer.Infrastructure\ATSProServer.Infrastructure.csproj", "{7A9BAA83-D5E3-4962-83C0-98E197BC76E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATSProServer.Infrastructure", "ATSProServer.Infrastructure\ATSProServer.Infrastructure.csproj", "{7A9BAA83-D5E3-4962-83C0-98E197BC76E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATSProServer.Persistance", "ATSProServer.Persistance\ATSProServer.Persistance.csproj", "{DDBAE744-FC21-4C8B-B636-F9449F74453D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATSProServer.Persistance", "ATSProServer.Persistance\ATSProServer.Persistance.csproj", "{DDBAE744-FC21-4C8B-B636-F9449F74453D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATSProServer.Presentation", "ATSProServer.Presentation\ATSProServer.Presentation.csproj", "{DE02E384-5CC4-48A0-A5E4-E6D7FA02E386}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATSProServer.Presentation", "ATSProServer.Presentation\ATSProServer.Presentation.csproj", "{DE02E384-5CC4-48A0-A5E4-E6D7FA02E386}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATSProServer.WebApi", "ATSProServer.WebApi\ATSProServer.WebApi.csproj", "{A9D607F7-E5FB-42B9-8285-3C2AD95DC9EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATSProServer.WebApi", "ATSProServer.WebApi\ATSProServer.WebApi.csproj", "{A9D607F7-E5FB-42B9-8285-3C2AD95DC9EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

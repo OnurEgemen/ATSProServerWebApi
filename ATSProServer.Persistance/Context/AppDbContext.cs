@@ -1,6 +1,7 @@
 ﻿using ATSProServer.Domain.Abstractions;
 using ATSProServer.Domain.AppEntities;
 using ATSProServer.Domain.AppEntities.Identity;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
@@ -35,6 +36,16 @@ namespace ATSProServer.Persistance.Context
             }
 
             return base.SaveChangesAsync(cancellationToken);
+        }
+
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Ignore<IdentityUserLogin<string>>();
+            builder.Ignore<IdentityUserRole<string>>();
+            builder.Ignore<IdentityUserClaim<string>>();
+            builder.Ignore<IdentityUserToken<string>>();
+            builder.Ignore<IdentityRoleClaim<string>>();
         }
 
 

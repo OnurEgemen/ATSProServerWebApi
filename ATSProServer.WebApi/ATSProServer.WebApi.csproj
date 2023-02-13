@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ATSProServer.Infrastructure\ATSProServer.Infrastructure.csproj" />
     <ProjectReference Include="..\ATSProServer.Persistance\ATSProServer.Persistance.csproj" />
     <ProjectReference Include="..\ATSProServer.Presentation\ATSProServer.Presentation.csproj" />
   </ItemGroup>

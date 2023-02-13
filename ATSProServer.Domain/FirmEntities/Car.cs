@@ -9,6 +9,6 @@ namespace ATSProServer.Domain.FirmEntities
         public string CarModel { get; set; }
         public string CarYear { get; set; }
         public string CarDetails { get; set; }
-        public string FirmId { get; set; }
+       
     }
 }

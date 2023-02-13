@@ -2,6 +2,6 @@
 {
     public sealed class MigrateFirmDatabasesResponse
     {
-        public string Message { get; set; } = "Şirketlerin database bilgileri migrate edildi!";
+        public string Message { get; set; } = "Şirketin database bilgileri güncellendi edildi!";
     }
 }

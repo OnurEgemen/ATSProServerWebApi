@@ -39,9 +39,6 @@ namespace ATSProServer.Persistance.Migrations.FirmDb
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("FirmId")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(max)");
 

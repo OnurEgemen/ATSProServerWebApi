@@ -21,8 +21,4 @@
     <ProjectReference Include="..\ATSProServer.Domain\ATSProServer.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Services\FirmServices\" />
-  </ItemGroup>
-
 </Project>

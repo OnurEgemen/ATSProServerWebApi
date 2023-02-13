@@ -12,12 +12,14 @@ namespace ATSProServer.Application.Features.AppFeatures.FirmFeatures.Commands.Mi
         IRequestHandler<MigrateFirmDatabasesRequest, MigrateFirmDatabasesResponse>
     {
         private readonly IFirmService _firmService;
+
         public MigrateFirmDatabasesHandler(IFirmService firmService)
         {
             _firmService = firmService;
         }
 
-        public async Task<MigrateFirmDatabasesResponse> Handle(MigrateFirmDatabasesRequest request, CancellationToken cancellationToken)
+        public async Task<MigrateFirmDatabasesResponse> Handle
+            (MigrateFirmDatabasesRequest request, CancellationToken cancellationToken)
         {
             await _firmService.MigrateFirmDatabases();
             return new();
