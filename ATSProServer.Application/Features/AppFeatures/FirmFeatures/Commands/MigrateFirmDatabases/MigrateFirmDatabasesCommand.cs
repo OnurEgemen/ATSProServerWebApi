@@ -3,6 +3,6 @@ using MediatR;
 
 namespace ATSProServer.Application.Features.AppFeatures.FirmFeatures.Commands.MigrateFirmDatabase
 {
-    public sealed record MigrateFirmDatabasesCommand (): ICommand<MigrateFirmDatabasesCommandResponse>
+    public sealed record MigrateFirmDatabasesCommand (): ICommand<MigrateFirmDatabasesCommandResponse>;
     
 }

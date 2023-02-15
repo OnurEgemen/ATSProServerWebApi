@@ -18,7 +18,7 @@ namespace ATSProServer.Application.Features.AppFeatures.RoleFeatures.Queries.Get
             cancellationToken)
         {
             IList<AppRole> roles = await _roleService.GetAllRolesAsync();
-            return new GetAllRolesCommandResponse { Roles= roles };
+            return new (roles);
         }
     }
 }
