@@ -1,5 +1,6 @@
 using ATSProServer.Domain.AppEntities.Identity;
 using ATSProServer.WebApi.Configurations;
+using ATSProServer.WebApi.Middleware;
 using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +16,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseExceptionMiddleware();
 
 app.UseHttpsRedirection();
 

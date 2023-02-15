@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+﻿using ATSProServer.WebApi.Middleware;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.OpenApi.Models;
 
 namespace ATSProServer.WebApi.Configurations
@@ -7,8 +8,12 @@ namespace ATSProServer.WebApi.Configurations
     {
         public void Install(IServiceCollection services, IConfiguration configuration)
         {
+            services.AddScoped<ExceptionMiddleware>();
+
+
+
             services.AddControllers()
-    .AddApplicationPart(typeof(ATSProServer.Presentation.AssemblyReference).Assembly);
+            .AddApplicationPart(typeof(ATSProServer.Presentation.AssemblyReference).Assembly);
 
 
 
