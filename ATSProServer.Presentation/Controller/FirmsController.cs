@@ -15,17 +15,17 @@ namespace ATSProServer.Presentation.Controller
         }
 
         [HttpPost("[action]")]
-        public async Task<IActionResult>CreateFirm(CreateFirmRequest request)
+        public async Task<IActionResult>CreateFirm(CreateFirmCommand request)
         {
-            CreateFirmResponse response = await _mediator.Send(request);
+            CreateFirmCommandResponse response = await _mediator.Send(request);
             return Ok(response);
         }
 
         [HttpGet("[action]")]
         public async Task<IActionResult> MigrateFirmDatabases()
         {
-            MigrateFirmDatabasesRequest request = new();
-            MigrateFirmDatabasesResponse response = await _mediator.Send(request);
+            MigrateFirmDatabasesCommand request = new();
+            MigrateFirmDatabasesCommandResponse response = await _mediator.Send(request);
             return Ok(response);
         }
 

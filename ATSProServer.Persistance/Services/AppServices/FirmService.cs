@@ -24,7 +24,7 @@ namespace ATSProServer.Persistance.Services.AppServices
 
         }
 
-        public async Task CreateFirm(CreateFirmRequest request)
+        public async Task CreateFirm(CreateFirmCommand request)
         {
             Firm firm = _mapper.Map<Firm>(request);
             firm.Id = Guid.NewGuid().ToString();

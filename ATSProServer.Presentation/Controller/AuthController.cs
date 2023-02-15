@@ -13,9 +13,9 @@ namespace ATSProServer.Presentation.Controller
         }
 
         [HttpPost("[action]")]
-        public async Task<IActionResult> Login(LoginRequest request)
+        public async Task<IActionResult> Login(LoginCommand request)
         {
-            LoginResponse response = await _mediator.Send(request);
+            LoginCommandResponse response = await _mediator.Send(request);
             return Ok(response);
         }
     }

@@ -12,11 +12,11 @@ namespace ATSProServer.Persistance.Mapping
     {
         public MappingProfile()
         {
-            CreateMap<CreateFirmRequest, Firm>();
+            CreateMap<CreateFirmCommand, Firm>();
 
-            CreateMap<CreateCarRequest, Car>();
+            CreateMap<CreateCarCommand, Car>();
 
-            CreateMap<CreateRoleRequest, AppRole>();
+            CreateMap<CreateRoleCommand, AppRole>();
         }
     }
 }

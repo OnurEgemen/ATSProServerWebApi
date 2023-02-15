@@ -9,6 +9,6 @@ namespace ATSProServer.Application.Service.FirmServices
 {
     public interface ICarService
     {
-        Task CreateCarAsync(CreateCarRequest request);
+        Task CreateCarAsync(CreateCarCommand request);
     }
 }

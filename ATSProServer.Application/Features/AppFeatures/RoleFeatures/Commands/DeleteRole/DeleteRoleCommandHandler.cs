@@ -1,20 +1,19 @@
-﻿using ATSProServer.Application.Service.AppServices;
+﻿using ATSProServer.Application.Messaging;
+using ATSProServer.Application.Service.AppServices;
 using ATSProServer.Domain.AppEntities.Identity;
-using MediatR;
-using Microsoft.AspNetCore.Identity;
 
 namespace ATSProServer.Application.Features.AppFeatures.RoleFeatures.Commands.DeleteRole
 {
-    public class DeleteRoleHandler : IRequestHandler<DeleteRoleRequest, DeleteRoleResponse>
+    public class DeleteRoleCommandHandler : ICommandHandler<DeleteRoleCommand, DeleteRoleCommandResponse>
     {
         private readonly IRoleService _roleService;
 
-        public DeleteRoleHandler(IRoleService roleService)
+        public DeleteRoleCommandHandler(IRoleService roleService)
         {
             _roleService = roleService;
         }
 
-        public async Task<DeleteRoleResponse> Handle(DeleteRoleRequest request, CancellationToken 
+        public async Task<DeleteRoleCommandResponse> Handle(DeleteRoleCommand request, CancellationToken 
             cancellationToken)
         {
             AppRole role = await _roleService.GetById(request.Id);

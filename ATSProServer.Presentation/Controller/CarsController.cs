@@ -13,9 +13,9 @@ namespace ATSProServer.Presentation.Controller
         }
 
         [HttpPost("[action]")]
-        public async Task<IActionResult> CreateCar(CreateCarRequest request)
+        public async Task<IActionResult> CreateCar(CreateCarCommand request)
         {
-            CreateCarResponse response= await _mediator.Send(request);
+            CreateCarCommandResponse response= await _mediator.Send(request);
             return Ok(response);
         }
     }

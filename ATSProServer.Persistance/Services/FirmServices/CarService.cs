@@ -24,7 +24,7 @@ namespace ATSProServer.Persistance.Services.FirmServices
             _mapper = mapper;
         }
 
-        public async Task CreateCarAsync(CreateCarRequest request)
+        public async Task CreateCarAsync(CreateCarCommand request)
         {
             _context = (FirmDbContext)_contextService.CreateDbContextInstance(request.FirmId);
             _carCommandRepository.SetDbContextInstance(_context);
