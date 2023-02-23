@@ -1,4 +1,5 @@
-﻿using ATSProServer.Application.Features.AppFeatures.RoleFeatures.Commands.CreateRole;
+﻿using ATSProServer.Application.Features.AppFeatures.RoleFeatures.Commands.CreateAllRoles;
+using ATSProServer.Application.Features.AppFeatures.RoleFeatures.Commands.CreateRole;
 using ATSProServer.Application.Features.AppFeatures.RoleFeatures.Commands.DeleteRole;
 using ATSProServer.Application.Features.AppFeatures.RoleFeatures.Commands.UpdateRole;
 using ATSProServer.Application.Features.AppFeatures.RoleFeatures.Queries.GetAllRoles;
@@ -45,6 +46,14 @@ namespace ATSProServer.Presentation.Controller
             
 
             DeleteRoleCommandResponse response = await _mediator.Send(request);
+            return Ok(response);
+        }
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> CreateAllRoles()
+        {
+            CreateAllRolesCommand request = new();
+            CreateAllRolesCommandResponse response= await _mediator.Send(request);
             return Ok(response);
         }
 

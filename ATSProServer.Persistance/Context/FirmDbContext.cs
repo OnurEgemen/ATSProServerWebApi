@@ -14,7 +14,7 @@ namespace ATSProServer.Persistance.Context
            
             if(firm!= null) 
             {
-                if (firm.UserId == "")
+                if (firm.ServerUserId == "")
                     ConnectionString = $"" +
                         $"Data Source={firm.ServerName};" +
                         $"Initial Catalog={firm.DatabaseName};" +
@@ -28,8 +28,8 @@ namespace ATSProServer.Persistance.Context
                     ConnectionString = $"" +
                         $"Data Source={firm.ServerName};" +
                         $"Initial Catalog={firm.DatabaseName} " +
-                        $"UserId{firm.UserId};" +
-                        $"Password{firm.Password};" +
+                        $"UserId{firm.ServerUserId};" +
+                        $"Password{firm.ServerPassword};" +
                         $"Integrated Security=True;" +
                         $"Connect Timeout=30;" +
                         $"Encrypt=False;" +

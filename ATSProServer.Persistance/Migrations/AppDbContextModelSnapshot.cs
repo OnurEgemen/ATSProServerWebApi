@@ -45,10 +45,13 @@ namespace ATSProServer.Persistance.Migrations
                     b.Property<string>("IdentityNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Password")
+                    b.Property<string>("ServerName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ServerName")
+                    b.Property<string>("ServerPassword")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ServerUserId")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TaxDepartment")
@@ -59,9 +62,6 @@ namespace ATSProServer.Persistance.Migrations
 
                     b.Property<DateTime?>("UpdateDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -83,6 +83,9 @@ namespace ATSProServer.Persistance.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NormalizedName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -151,6 +154,59 @@ namespace ATSProServer.Persistance.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("ATSProServer.Domain.AppEntities.MainRole", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FirmId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<bool>("IsRoleCreatedByAdmin")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("FirmId");
+
+                    b.ToTable("MainRoles");
+                });
+
+            modelBuilder.Entity("ATSProServer.Domain.AppEntities.MainRoleAndRoleRelationship", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("MainRoleId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("RoleId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MainRoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("MainRoleAndRoleRelationships");
+                });
+
             modelBuilder.Entity("ATSProServer.Domain.AppEntities.UserAndFirmRelationship", b =>
                 {
                     b.Property<string>("Id")
@@ -175,6 +231,30 @@ namespace ATSProServer.Persistance.Migrations
                     b.HasIndex("FirmId");
 
                     b.ToTable("userAndFirmRelationships");
+                });
+
+            modelBuilder.Entity("ATSProServer.Domain.AppEntities.MainRole", b =>
+                {
+                    b.HasOne("ATSProServer.Domain.AppEntities.Firm", "Firm")
+                        .WithMany()
+                        .HasForeignKey("FirmId");
+
+                    b.Navigation("Firm");
+                });
+
+            modelBuilder.Entity("ATSProServer.Domain.AppEntities.MainRoleAndRoleRelationship", b =>
+                {
+                    b.HasOne("ATSProServer.Domain.AppEntities.MainRole", "MainRole")
+                        .WithMany()
+                        .HasForeignKey("MainRoleId");
+
+                    b.HasOne("ATSProServer.Domain.AppEntities.Identity.AppRole", "AppRole")
+                        .WithMany()
+                        .HasForeignKey("RoleId");
+
+                    b.Navigation("AppRole");
+
+                    b.Navigation("MainRole");
                 });
 
             modelBuilder.Entity("ATSProServer.Domain.AppEntities.UserAndFirmRelationship", b =>

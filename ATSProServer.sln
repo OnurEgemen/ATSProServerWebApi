@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATSProServer.Presentation",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ATSProServer.WebApi", "ATSProServer.WebApi\ATSProServer.WebApi.csproj", "{A9D607F7-E5FB-42B9-8285-3C2AD95DC9EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ATSProServer.UnitTest", "ATSProServer.UnitTest\ATSProServer.UnitTest.csproj", "{446D0767-1096-49D3-976F-B933F56A4F18}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{A9D607F7-E5FB-42B9-8285-3C2AD95DC9EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9D607F7-E5FB-42B9-8285-3C2AD95DC9EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9D607F7-E5FB-42B9-8285-3C2AD95DC9EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{446D0767-1096-49D3-976F-B933F56A4F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{446D0767-1096-49D3-976F-B933F56A4F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{446D0767-1096-49D3-976F-B933F56A4F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{446D0767-1096-49D3-976F-B933F56A4F18}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +72,7 @@ Global
 		{DDBAE744-FC21-4C8B-B636-F9449F74453D} = {0EEA692F-B31E-4D36-B0A9-8D5033D6E1EB}
 		{DE02E384-5CC4-48A0-A5E4-E6D7FA02E386} = {0EEA692F-B31E-4D36-B0A9-8D5033D6E1EB}
 		{A9D607F7-E5FB-42B9-8285-3C2AD95DC9EA} = {A1329890-4FC5-4712-8644-027456F6FF33}
+		{446D0767-1096-49D3-976F-B933F56A4F18} = {301820CA-CA43-46DE-BFB5-166DD74ED0CC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {74B6ACCA-EF31-49FF-9417-5D97EA52CA59}

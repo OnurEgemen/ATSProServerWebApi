@@ -1,4 +1,4 @@
-﻿using ATSProServer.Application.Features.AppFeatures.AppUserFeatures.Login;
+﻿using ATSProServer.Application.Features.AppFeatures.AppUserFeatures.Commands.Login;
 using ATSProServer.Presentation.Abstraction;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;

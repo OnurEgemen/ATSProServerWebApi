@@ -24,12 +24,13 @@ namespace ATSProServer.Persistance.Services.AppServices
 
         }
 
-        public async Task CreateFirm(CreateFirmCommand request)
+        public async Task CreateFirm(CreateFirmCommand request, 
+            CancellationToken cancellationToken)
         {
             Firm firm = _mapper.Map<Firm>(request);
             firm.Id = Guid.NewGuid().ToString();
-            await _context.Set<Firm>().AddAsync(firm);
-            await _context.SaveChangesAsync();
+            await _context.Set<Firm>().AddAsync(firm,cancellationToken);
+            await _context.SaveChangesAsync(cancellationToken);
         }
 
         public async Task<Firm?> GetFirmByName(string name)

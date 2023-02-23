@@ -15,6 +15,8 @@ namespace ATSProServer.Persistance.Context
         }
             
         public DbSet<Firm> Firms { get; set; }
+        public DbSet<MainRole> MainRoles { get; set; }
+        public DbSet<MainRoleAndRoleRelationship> MainRoleAndRoleRelationships { get; set; }
         public DbSet<UserAndFirmRelationship> userAndFirmRelationships { get; set; }
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)

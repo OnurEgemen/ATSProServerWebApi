@@ -15,9 +15,11 @@ namespace ATSProServer.Presentation.Controller
         }
 
         [HttpPost("[action]")]
-        public async Task<IActionResult>CreateFirm(CreateFirmCommand request)
+        public async Task<IActionResult>CreateFirm(CreateFirmCommand request, 
+            CancellationToken cancellationToken)
         {
-            CreateFirmCommandResponse response = await _mediator.Send(request);
+            CreateFirmCommandResponse response = await _mediator.Send(request,
+                cancellationToken);
             return Ok(response);
         }
 
@@ -28,8 +30,5 @@ namespace ATSProServer.Presentation.Controller
             MigrateFirmDatabasesCommandResponse response = await _mediator.Send(request);
             return Ok(response);
         }
-
-
-
     }
 }

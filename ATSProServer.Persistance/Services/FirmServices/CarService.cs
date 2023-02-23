@@ -2,7 +2,7 @@
 using ATSProServer.Application.Service.FirmServices;
 using ATSProServer.Domain;
 using ATSProServer.Domain.FirmEntities;
-using ATSProServer.Domain.Repositories.CarRepositories;
+using ATSProServer.Domain.Repositories.CompanyDbContext.CarRepositories;
 using ATSProServer.Persistance.Context;
 using AutoMapper;
 
@@ -11,6 +11,7 @@ namespace ATSProServer.Persistance.Services.FirmServices
     public class CarService : ICarService
     {
         private readonly ICarCommandRepository _carCommandRepository;
+        private readonly ICarQueryRepository _queryRepository;
         private readonly IContextService _contextService;
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
@@ -24,7 +25,8 @@ namespace ATSProServer.Persistance.Services.FirmServices
             _mapper = mapper;
         }
 
-        public async Task CreateCarAsync(CreateCarCommand request)
+        public async Task CreateCarAsync(CreateCarCommand request, 
+            CancellationToken cancellationToken)
         {
             _context = (FirmDbContext)_contextService.CreateDbContextInstance(request.FirmId);
             _carCommandRepository.SetDbContextInstance(_context);
@@ -34,8 +36,13 @@ namespace ATSProServer.Persistance.Services.FirmServices
 
             car.CarId = Guid.NewGuid().ToString();
 
-            await _carCommandRepository.AddAsync(car);
-            await _unitOfWork.SaveChangesAsync();
+            await _carCommandRepository.AddAsync(car, cancellationToken);
+            await _unitOfWork.SaveChangesAsync(cancellationToken);
+        }
+
+        public async Task<Car> GetByCarId(string carId)
+        {
+            return await _queryRepository.GetFirstByExpression(x => x.CarId == carId);
         }
     }
 }

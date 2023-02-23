@@ -18,7 +18,7 @@ namespace ATSProServer.Application.Features.AppFeatures.FirmFeatures.Commands.Cr
         {
             Firm firm = await _firmService.GetFirmByName(request.FirmName);
             if (firm != null) throw new Exception("Bu şirket adı daha önce kullanılmıştır.");
-            await _firmService.CreateFirm(request);
+            await _firmService.CreateFirm(request,cancellationToken);
             return new();
         }
     }

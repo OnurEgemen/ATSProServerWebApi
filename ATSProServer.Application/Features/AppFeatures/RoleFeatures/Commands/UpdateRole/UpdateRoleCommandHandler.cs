@@ -28,6 +28,7 @@ namespace ATSProServer.Application.Features.AppFeatures.RoleFeatures.Commands.Up
 
             role.Code = request.Code;
             role.Name = request.Name;
+            
             await _roleService.UpdateAsync(role);
             return new();
         }

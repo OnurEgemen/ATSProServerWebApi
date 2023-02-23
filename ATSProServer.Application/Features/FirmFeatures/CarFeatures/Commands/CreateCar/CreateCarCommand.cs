@@ -4,6 +4,8 @@ namespace ATSProServer.Application.Features.FirmFeatures.CarFeatures.Commands.Cr
 {
     public sealed record CreateCarCommand(
         string CarId,
+        string CarName,
+        string CarBrand,
         string CarModel,
         string CarYear,
         string CarDetails,
