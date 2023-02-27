@@ -21,15 +21,6 @@ namespace ATSProServer.Persistance.Repository.GenericRepositories.FirmDbContext
             ? context.Set<T>().FirstOrDefault()
             : context.Set<T>().AsNoTracking().FirstOrDefault());
 
-        private static readonly Func<Context.FirmDbContext, Expression<Func<T, bool>>, bool, Task<T>> GetFirstByExpressionCompiled =
-          EF.CompileAsyncQuery((Context.FirmDbContext context, Expression<Func<T, bool>> expression,
-              bool isTracking) =>
-                isTracking == true
-                ? context.Set<T>().FirstOrDefault(expression)
-                : context.Set<T>().AsNoTracking().FirstOrDefault(expression));
-
-
-
         private Context.FirmDbContext _context;
         public DbSet<T> Entity { get; set; }
 
