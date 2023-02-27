@@ -48,9 +48,17 @@ namespace ATSProServer.Persistance.Repository.GenericRepositories.FirmDbContext
             return await GetFirstCompiled(_context, isTracking);
         }
 
-        public async Task<T> GetFirstByExpression(Expression<Func<T, bool>> expression, bool isTracking = true)
+        public async Task<T> GetFirstByExpression(Expression<Func<T, bool>> expression,
+            CancellationToken cancellationToken = default, bool isTracking = true)
         {
-            return await GetFirstByExpressionCompiled(_context, expression, isTracking);
+            T entity = null;
+            if (!isTracking)
+                entity = await Entity.AsNoTracking().Where(expression).FirstOrDefaultAsync();
+            else
+                entity = await Entity.Where(expression).FirstOrDefaultAsync();
+
+
+            return entity;
         }
 
         public IQueryable<T> GetWhere(Expression<Func<T, bool>> expression, bool isTracking = true)

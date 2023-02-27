@@ -52,8 +52,8 @@ namespace ATSProServer.Presentation.Controller
         [HttpGet("[action]")]
         public async Task<IActionResult> CreateAllRoles()
         {
-            CreateAllRolesCommand request = new();
-            CreateAllRolesCommandResponse response= await _mediator.Send(request);
+            CreateStaticRolesCommand request = new();
+            CreateStaticRolesCommandResponse response= await _mediator.Send(request);
             return Ok(response);
         }
 

@@ -3,6 +3,7 @@ using ATSProServer.Application.Service.FirmServices;
 using ATSProServer.Domain;
 using ATSProServer.Domain.FirmEntities;
 using ATSProServer.Domain.Repositories.CompanyDbContext.CarRepositories;
+using ATSProServer.Domain.UnitOfWorks;
 using ATSProServer.Persistance.Context;
 using AutoMapper;
 
@@ -13,11 +14,11 @@ namespace ATSProServer.Persistance.Services.FirmServices
         private readonly ICarCommandRepository _carCommandRepository;
         private readonly ICarQueryRepository _queryRepository;
         private readonly IContextService _contextService;
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly IFirmDbUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
         private FirmDbContext _context;
 
-        public CarService(ICarCommandRepository carCommandRepository, IContextService contextService, IUnitOfWork unitOfWork, IMapper mapper)
+        public CarService(ICarCommandRepository carCommandRepository, IContextService contextService, IFirmDbUnitOfWork unitOfWork, IMapper mapper)
         {
             _carCommandRepository = carCommandRepository;
             _contextService = contextService;
@@ -40,9 +41,11 @@ namespace ATSProServer.Persistance.Services.FirmServices
             await _unitOfWork.SaveChangesAsync(cancellationToken);
         }
 
-        public async Task<Car> GetByCarId(string carId)
+        
+
+        public async Task<Car> GetByCarId(string carId, CancellationToken cancellationToken)
         {
-            return await _queryRepository.GetFirstByExpression(x => x.CarId == carId);
+            return await _queryRepository.GetFirstByExpression(x => x.CarId == carId , cancellationToken);
         }
     }
 }

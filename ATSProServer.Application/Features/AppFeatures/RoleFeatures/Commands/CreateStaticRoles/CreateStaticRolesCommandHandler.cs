@@ -5,17 +5,17 @@ using ATSProServer.Domain.Roles;
 
 namespace ATSProServer.Application.Features.AppFeatures.RoleFeatures.Commands.CreateAllRoles;
 
-public sealed record CreateAllRolesCommandHandler :
-    ICommandHandler<CreateAllRolesCommand, CreateAllRolesCommandResponse>
+public sealed record CreateStaticRolesCommandHandler :
+    ICommandHandler<CreateStaticRolesCommand, CreateStaticRolesCommandResponse>
 {
     private readonly IRoleService _roleService;
 
-    public CreateAllRolesCommandHandler(IRoleService roleService)
+    public CreateStaticRolesCommandHandler(IRoleService roleService)
     {
         _roleService = roleService;
     }
 
-    public async Task<CreateAllRolesCommandResponse> Handle(CreateAllRolesCommand request, CancellationToken cancellationToken)
+    public async Task<CreateStaticRolesCommandResponse> Handle(CreateStaticRolesCommand request, CancellationToken cancellationToken)
     {
 
         IList<AppRole> originalRoleList = RoleList.GetStaticRoles();

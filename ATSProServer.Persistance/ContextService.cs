@@ -1,5 +1,6 @@
 ﻿using ATSProServer.Domain;
 using ATSProServer.Domain.AppEntities;
+using ATSProServer.Domain.UnitOfWorks;
 using ATSProServer.Persistance.Context;
 using Microsoft.EntityFrameworkCore;
 

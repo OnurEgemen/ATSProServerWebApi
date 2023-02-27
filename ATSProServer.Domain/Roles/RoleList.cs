@@ -1,4 +1,5 @@
-﻿using ATSProServer.Domain.AppEntities.Identity;
+﻿using ATSProServer.Domain.AppEntities;
+using ATSProServer.Domain.AppEntities.Identity;
 
 namespace ATSProServer.Domain.Roles;
 
@@ -34,6 +35,26 @@ public sealed class RoleList
        
         return appRoles;
 
+    }
+
+    public static List<MainRole> GetStaticMainRoles()
+    {
+        List<MainRole> mainRoles = new List<MainRole>
+        {
+            new MainRole(
+                Guid.NewGuid().ToString(),
+                "SuperAdmin",
+                true),
+            new MainRole(
+                Guid.NewGuid().ToString(),
+                "SystemAdmin",
+                true),
+            new MainRole(
+                Guid.NewGuid().ToString(),
+                "FirmOwner",
+                true)
+        };
+        return mainRoles;
     }
 
     #region RoleTitleName

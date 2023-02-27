@@ -1,10 +1,10 @@
-﻿using ATSProServer.Domain;
+﻿using ATSProServer.Domain.UnitOfWorks;
 using ATSProServer.Persistance.Context;
 using Microsoft.EntityFrameworkCore;
 
-namespace ATSProServer.Persistance
+namespace ATSProServer.Persistance.UnitOfWorks
 {
-    public sealed class UnitOfWork : IUnitOfWork
+    public sealed class FirmDbUnitOfWork : IFirmDbUnitOfWork
     {
         private FirmDbContext _context;
 
