@@ -1,0 +1,12 @@
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Domain\bin\Debug\net6.0\ATSProServer.Domain.deps.json
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Domain\bin\Debug\net6.0\ATSProServer.Domain.dll
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Domain\bin\Debug\net6.0\ATSProServer.Domain.pdb
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Domain\obj\Debug\net6.0\ATSProServer.Domain.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Domain\obj\Debug\net6.0\ATSProServer.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Domain\obj\Debug\net6.0\ATSProServer.Domain.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Domain\obj\Debug\net6.0\ATSProServer.Domain.AssemblyInfo.cs
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Domain\obj\Debug\net6.0\ATSProServer.Domain.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Domain\obj\Debug\net6.0\ATSProServer.Domain.dll
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Domain\obj\Debug\net6.0\refint\ATSProServer.Domain.dll
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Domain\obj\Debug\net6.0\ATSProServer.Domain.pdb
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Domain\obj\Debug\net6.0\ref\ATSProServer.Domain.dll

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "kYu2BgKwkU79wFjf4mePicLonnETM/wDGhcWpRYEcDc=",
+  "Source": "ATSProServer.WebApi",
+  "BasePath": "_content/ATSProServer.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

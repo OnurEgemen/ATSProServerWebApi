@@ -1,0 +1,17 @@
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Presentation\bin\Debug\net6.0\ATSProServer.Presentation.deps.json
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Presentation\bin\Debug\net6.0\ATSProServer.Presentation.dll
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Presentation\bin\Debug\net6.0\ATSProServer.Presentation.pdb
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Presentation\obj\Debug\net6.0\ATSProServer.Presentation.csproj.AssemblyReference.cache
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Presentation\obj\Debug\net6.0\ATSProServer.Presentation.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Presentation\obj\Debug\net6.0\ATSProServer.Presentation.AssemblyInfoInputs.cache
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Presentation\obj\Debug\net6.0\ATSProServer.Presentation.AssemblyInfo.cs
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Presentation\obj\Debug\net6.0\ATSProServer.Presentation.csproj.CoreCompileInputs.cache
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Presentation\obj\Debug\net6.0\ATSProServer.Presentation.dll
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Presentation\obj\Debug\net6.0\refint\ATSProServer.Presentation.dll
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Presentation\obj\Debug\net6.0\ATSProServer.Presentation.pdb
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Presentation\obj\Debug\net6.0\ref\ATSProServer.Presentation.dll
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Presentation\bin\Debug\net6.0\ATSProServer.Application.dll
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Presentation\bin\Debug\net6.0\ATSProServer.Application.pdb
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Presentation\obj\Debug\net6.0\ATSProServer.Presentation.csproj.CopyComplete
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Presentation\bin\Debug\net6.0\ATSProServer.Domain.dll
+C:\Users\hp\Desktop\ATSProTestServer\ATSProServer\ATSProServer.Presentation\bin\Debug\net6.0\ATSProServer.Domain.pdb
